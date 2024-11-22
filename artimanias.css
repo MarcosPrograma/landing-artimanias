@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* -------- TODO -------- */
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    font-family: "Space Grotesk";
+    background: #8EED00;
+    overflow: hidden;
+}
+
+h1 {
+    display: flex;
+    font-style: bold;
+    font-size: 42px;
+    position: absolute;
+    color: #1E1E1E;
+}
+
+p {
+    text-decoration: none;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    color: #1E1E1E;
+}
+
+/* -------- Panel izquierdo -------- */
+.panel-izquierdo{
+    width: 10%;
+    background-color: #231E1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 2;
+    border-right: 1px solid #fff;
+    position: relative;
+}
+
+.panel-izquierdo .icono{
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 1rem 1rem 1rem;
+    cursor: pointer;
+}
+
+.panel-izquierdo .icono:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Globito */
+.panel-izquierdo a {
+    position: relative;
+}
+
+.panel-izquierdo a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255, 0.7);
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.panel-izquierdo a:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* -------- Contenido -------- */
+.contenido{
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+    text-align: justify;
+    margin: 2rem 10rem 0 10rem;
+    overflow: hidden;
+}
+
+.contenido h1{
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    
+}
+
+.contenido p {
+    color: #000000;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-top: 4rem;
+    opacity: 0.7;
+}
+
+.boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 10rem;
+    height: 3.5rem;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid #000000;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #000000;
+    transition: all 0.2s ease-in-out;
+}
+
+.boton:hover {
+    transform: translate(0px, -2px);
+    box-shadow: 0 8px 0 #000000;
+}
+
+.boton:active {
+    transform: translate(0px, 1px);
+    box-shadow:  0 2px 0 #000000;
+}
+
+.icono-boton {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* -------- Placas institucionales -------- */
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #231E1E;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+}
+
+.footer-placas {
+    margin: 0.5rem 0 0.5rem 0;
+    width: 25rem;
+    height: 2.5rem;
+    object-fit: contain;
+    z-index: 1;
+}
