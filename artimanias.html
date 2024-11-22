@@ -12,9 +12,7 @@
 <body>
     <!-- Menú hamburguesa -->
     <div class="menu-hamburguesa" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <img src="src/img/menu.svg" alt="Menú hamburguesa">
     </div>
 
     <!-- ------ Panel izquierdo ------ -->
@@ -53,6 +51,8 @@
     <script>
         function toggleMenu() {
             document.body.classList.toggle('menu-abierto');
+            const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+            menuHamburguesa.classList.toggle('menu-fijo');
         }
     </script>
 </body>
