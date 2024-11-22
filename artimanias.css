@@ -19,7 +19,7 @@ body {
 }
 
 /* -------- Panel izquierdo -------- */
-.panel-izquierdo{
+.panel-izquierdo {
     width: 10%;
     background-color: #231E1E;
     display: flex;
@@ -31,7 +31,7 @@ body {
     position: relative;
 }
 
-.panel-izquierdo .icono{
+.panel-izquierdo .icono {
     width: 3rem;
     height: 3rem;
     margin: 1rem 1rem 1rem 1rem;
@@ -54,7 +54,7 @@ body {
     top: 50%;
     left: 110%;
     transform: translateY(-50%);
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     color: #000000;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -72,16 +72,16 @@ body {
     transform: translateY(-50%) translateX(0);
 }
 
-.panel-izquierdo span{
+.panel-izquierdo span {
     display: none;
 }
 
-.menu-hamburguesa{
+.menu-hamburguesa {
     display: none;
 }
 
 /* -------- Contenido -------- */
-.contenido{
+.contenido {
     flex-grow: 1;
     padding: 1.25rem;
     overflow-y: auto;
@@ -90,7 +90,7 @@ body {
     overflow: hidden;
 }
 
-.contenido h1{
+.contenido h1 {
     color: #000000;
     font-size: 2rem;
 }
@@ -103,7 +103,7 @@ body {
     opacity: 0.7;
 }
 
-.boton{
+.boton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,7 +132,7 @@ body {
 
 .boton:active {
     transform: translate(0px, 1px);
-    box-shadow:  0 2px 0 #000000;
+    box-shadow: 0 2px 0 #000000;
 }
 
 .icono-boton {
@@ -141,7 +141,7 @@ body {
 }
 
 /* -------- Placas institucionales -------- */
-.footer{
+.footer {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -161,8 +161,10 @@ body {
 }
 
 /* ---------------------------------- Media Queries ---------------------------------- */
-@media (max-width: 768px){
-    html, body{
+@media (max-width: 768px) {
+
+    html,
+    body {
         background-color: #000000;
         color: #00FF00;
         overflow-y: auto;
@@ -173,7 +175,7 @@ body {
         flex-direction: column;
     }
 
-    .panel-izquierdo{
+    .panel-izquierdo {
         position: fixed;
         top: 0;
         left: -100%;
@@ -195,17 +197,17 @@ body {
         display: flex;
         align-items: center;
         width: 100%;
-        gap: 1rem; 
+        gap: 1rem;
         text-decoration: none;
         font-size: 1.8rem;
-        font-weight: bold; 
+        font-weight: bold;
         color: #8EED00;
         padding-top: 0.8rem;
         padding-left: 0.4rem;
         transition: background-color 0.2s ease-in-out;
     }
 
-    .panel-izquierdo a::after{
+    .panel-izquierdo a::after {
         display: none;
     }
 
@@ -214,11 +216,11 @@ body {
         height: 4rem;
     }
 
-    .panel-izquierdo span{
+    .panel-izquierdo span {
         display: flex;
     }
 
-    .contenido{
+    .contenido {
         flex-grow: 1;
         padding: 1.25rem;
         text-align: justify;
@@ -228,12 +230,12 @@ body {
         align-items: flex-start;
     }
 
-    .contenido h1{
+    .contenido h1 {
         font-size: 1.8rem;
         color: #8EED00;
     }
 
-    .contenido p{
+    .contenido p {
         font-size: 1.2rem;
         line-height: 1.6;
         color: #8EED00;
@@ -241,18 +243,18 @@ body {
         opacity: 1;
     }
 
-    .boton{
+    .boton {
         width: 100%;
         height: 3.5rem;
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
 
-    .footer{
+    .footer {
         background-color: #000000;
         color: #000000;
         text-align: center;
-        padding: 10px 0; 
+        padding: 10px 0;
         position: relative;
     }
 
@@ -287,5 +289,135 @@ body {
         top: 1rem;
         left: 1rem;
         z-index: 101;
+    }
+}
+
+/* -------- Móvil volteado horizontalemente --------*/
+@media (orientation: landscape) {
+
+    html,
+    body {
+        background-color: #000000;
+        color: #00FF00;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .panel-izquierdo {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #231E1E;
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+        z-index: 100;
+        overflow-y: auto;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    .panel-izquierdo a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #8EED00;
+        padding-top: 0.8rem;
+        padding-left: 0.2rem;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .panel-izquierdo a::after {
+        display: none;
+    }
+
+    .panel-izquierdo .icono {
+        width: 3rem;
+        height: 3rem;
+        margin-left: 5rem;
+    }
+
+    .panel-izquierdo span {
+        display: flex;
+    }
+
+    .contenido {
+        flex-grow: 1;
+        padding: 1.25rem;
+        text-align: justify;
+        margin: 1.5rem 2rem 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contenido h1 {
+        font-size: 1.8rem;
+        color: #8EED00;
+    }
+
+    .contenido p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #8EED00;
+        margin-top: 2rem;
+        opacity: 1;
+    }
+
+    .boton {
+        width: 100%;
+        height: 3.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer {
+        background-color: #000000;
+        color: #000000;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    /* Menú hamburguesa */
+    .menu-hamburguesa {
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        display: flex;
+        position: relative;
+        top: 1rem;
+        left: 1rem;
+        z-index: 101;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .menu-hamburguesa img {
+        display: block;
+        width: 100%;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .menu-abierto .panel-izquierdo {
+        left: 0;
+    }
+
+    .menu-hamburguesa.menu-fijo {
+        position: fixed;
     }
 }
