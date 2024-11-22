@@ -293,8 +293,7 @@ body {
 }
 
 /* -------- Móvil volteado horizontalemente --------*/
-@media (orientation: landscape) {
-
+@media (max-width: 1024px) and (orientation: landscape) {
     html,
     body {
         background-color: #000000;
